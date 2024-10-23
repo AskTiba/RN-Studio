@@ -1,0 +1,572 @@
+[
+  {
+    "id": 1,
+    "title": "Serene Lakeside Cottage",
+    "type": "Rental",
+    "location": {
+      "city": "Entebbe",
+      "country": "Uganda",
+      "address": "Lake Victoria Road, Entebbe",
+      "latitude": 0.0516,
+      "longitude": 32.4637
+    },
+    "images": [
+      "https://images.pexels.com/photos/17872459/pexels-photo-17872459/free-photo-of-modern-multistory-residential-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/13373735/pexels-photo-13373735.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7512033/pexels-photo-7512033.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A peaceful cottage overlooking Lake Victoria with a private garden and lake access.",
+    "price_per_month": 250,
+    "currency": "USD",
+    "amenities": ["WiFi", "Private Garden", "Free Parking", "Lake Access", "BBQ Grill"],
+    "availability": {
+      "start_date": "2024-10-20",
+      "end_date": "2025-01-10"
+    },
+    "reviews": [
+      {
+        "user": "David Kim",
+        "rating": 4.9,
+        "comment": "Beautiful and quiet place. Perfect for relaxation."
+      }
+    ],
+    "host": {
+      "name": "Mariam Lule",
+      "contact": "mariam@example.com",
+      "response_time": "within a few hours",
+      "rating": 4.8
+    }
+  },
+  {
+    "id": 2,
+    "title": "Modern Apartment in Kampala",
+    "type": "Rental",
+    "location": {
+      "city": "Kampala",
+      "country": "Uganda",
+      "address": "Kololo Hill Lane, Kampala",
+      "latitude": 0.3317,
+      "longitude": 32.5724
+    },
+    "images": [
+      "https://images.pexels.com/photos/415687/pexels-photo-415687.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/259962/pexels-photo-259962.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7533924/pexels-photo-7533924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A stylish apartment located in the upscale Kololo neighborhood. Perfect for business travelers.",
+    "price_per_month": 500,
+    "currency": "USD",
+    "amenities": ["WiFi", "Air Conditioning", "Gym Access", "24/7 Security", "Free Parking"],
+    "availability": {
+      "start_date": "2024-12-01",
+      "end_date": "2025-03-01"
+    },
+    "reviews": [
+      {
+        "user": "Aisha Nsubuga",
+        "rating": 4.5,
+        "comment": "The location was great and the apartment was very clean."
+      }
+    ],
+    "host": {
+      "name": "James Mukasa",
+      "contact": "jamesmukasa@example.com",
+      "response_time": "within an hour",
+      "rating": 4.9
+    }
+  },
+  {
+    "id": 3,
+    "title": "Hilltop Hostel in Jinja",
+    "type": "Hostel",
+    "location": {
+      "city": "Jinja",
+      "country": "Uganda",
+      "address": "Nalufenya Road, Jinja",
+      "latitude": 0.4434,
+      "longitude": 33.2032
+    },
+    "images": [
+      "https://images.pexels.com/photos/6580215/pexels-photo-6580215.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7546281/pexels-photo-7546281.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6438751/pexels-photo-6438751.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A backpacker's haven with a stunning view of the Nile River and close to adventure activities.",
+    "price_per_month": 150,
+    "currency": "USD",
+    "amenities": ["WiFi", "Shared Kitchen", "Common Room", "River View", "Free Parking"],
+    "availability": {
+      "start_date": "2024-10-15",
+      "end_date": "2025-01-15"
+    },
+    "reviews": [
+      {
+        "user": "Michael Otieno",
+        "rating": 4.6,
+        "comment": "Great vibes and perfect for budget travelers."
+      }
+    ],
+    "host": {
+      "name": "Jinja Backpackers",
+      "contact": "hosteljinja@example.com",
+      "response_time": "within a few hours",
+      "rating": 4.7
+    }
+  },
+  {
+    "id": 4,
+    "title": "Luxurious Villa in Muyenga",
+    "type": "Rental",
+    "location": {
+      "city": "Kampala",
+      "country": "Uganda",
+      "address": "Muyenga Hill, Kampala",
+      "latitude": 0.3028,
+      "longitude": 32.6314
+    },
+    "images": [
+      "https://images.pexels.com/photos/5461565/pexels-photo-5461565.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/8135297/pexels-photo-8135297.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7587747/pexels-photo-7587747.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A spacious villa with modern amenities, perfect for families or large groups.",
+    "price_per_month": 800,
+    "currency": "USD",
+    "amenities": ["WiFi", "Private Pool", "Air Conditioning", "Free Parking", "Outdoor Patio"],
+    "availability": {
+      "start_date": "2024-12-10",
+      "end_date": "2025-02-10"
+    },
+    "reviews": [
+      {
+        "user": "Sarah Kintu",
+        "rating": 4.9,
+        "comment": "The house was gorgeous, very spacious and clean."
+      }
+    ],
+    "host": {
+      "name": "Tom and Judith",
+      "contact": "tomandjudith@example.com",
+      "response_time": "within a day",
+      "rating": 4.9
+    }
+  },
+  {
+    "id": 5,
+    "title": "Rustic Cabin in Zirobwe",
+    "type": "Rental",
+    "location": {
+      "city": "Zirobwe",
+      "country": "Uganda",
+      "address": "Zirobwe Road, Zirobwe",
+      "latitude": 0.7438,
+      "longitude": 32.8844
+    },
+    "images": [
+      "https://images.pexels.com/photos/6874152/pexels-photo-6874152.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/28836084/pexels-photo-28836084/free-photo-of-spacious-empty-bedroom-with-wooden-floor.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6947282/pexels-photo-6947282.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A quaint cabin located in the serene countryside, perfect for those seeking a quiet retreat.",
+    "price_per_month": 90,
+    "currency": "USD",
+    "amenities": ["WiFi", "Free Parking", "Fireplace", "Nature Trails", "Pet Friendly"],
+    "availability": {
+      "start_date": "2024-11-01",
+      "end_date": "2025-02-01"
+    },
+    "reviews": [
+      {
+        "user": "Harriet Muwanga",
+        "rating": 4.7,
+        "comment": "Perfect for a peaceful getaway. Loved the outdoor space!"
+      }
+    ],
+    "host": {
+      "name": "Zirobwe Cabin Hosts",
+      "contact": "zirobwecabins@example.com",
+      "response_time": "within a few hours",
+      "rating": 4.8
+    }
+  },
+  {
+    "id": 6,
+    "title": "Budget Hostel Near Makerere",
+    "type": "Hostel",
+    "location": {
+      "city": "Kampala",
+      "country": "Uganda",
+      "address": "Makerere Hill Road, Kampala",
+      "latitude": 0.3399,
+      "longitude": 32.5714
+    },
+    "images": [
+      "https://images.pexels.com/photos/12534071/pexels-photo-12534071.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/439227/pexels-photo-439227.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6920610/pexels-photo-6920610.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A budget-friendly hostel ideal for students and travelers near Makerere University.",
+    "price_per_month": 100,
+    "currency": "USD",
+    "amenities": ["WiFi", "Shared Kitchen", "Study Area", "Free Parking", "Laundry Services"],
+    "availability": {
+      "start_date": "2024-10-25",
+      "end_date": "2025-01-25"
+    },
+    "reviews": [
+      {
+        "user": "Isaac Musoke",
+        "rating": 4.3,
+        "comment": "Convenient for students, affordable and clean."
+      }
+    ],
+    "host": {
+      "name": "Makerere Hostels",
+      "contact": "hostelmakerere@example.com",
+      "response_time": "within an hour",
+      "rating": 4.5
+    }
+  },
+  {
+    "id": 7,
+    "title": "Cozy House in Mukono",
+    "type": "Rental",
+    "location": {
+      "city": "Mukono",
+      "country": "Uganda",
+      "address": "Namilyango Road, Mukono",
+      "latitude": 0.3546,
+      "longitude": 32.7559
+    },
+    "images": [
+      "https://images.pexels.com/photos/7045710/pexels-photo-7045710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6782567/pexels-photo-6782567.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/8082230/pexels-photo-8082230.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A small but cozy house located near Mukono town with easy access to local markets.",
+    "price_per_month": 120,
+    "currency": "USD",
+    "amenities": ["WiFi", "Free Parking", "Kitchen", "Backyard", "Pet Friendly"],
+    "availability": {
+      "start_date": "2024-11-05",
+      "end_date": "2025-02-05"
+    },
+    "reviews": [
+      {
+        "user": "Peter Okello",
+        "rating": 4.6,
+        "comment": "Comfortable stay and very friendly host."
+      }
+    ],
+    "host": {
+      "name": "Grace Namata",
+      "contact": "gracenamata@example.com",
+      "response_time": "within a few hours",
+      "rating": 4.7
+    }
+  },
+  {
+    "id": 8,
+    "title": "Mountain Cabin in Fort Portal",
+    "type": "Rental",
+    "location": {
+      "city": "Fort Portal",
+      "country": "Uganda",
+      "address": "Rwenzori View Road, Fort Portal",
+      "latitude": 0.671,
+      "longitude": 30.275
+    },
+    "images": [
+      "https://images.pexels.com/photos/7045765/pexels-photo-7045765.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/707581/pexels-photo-707581.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6238612/pexels-photo-6238612.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A charming cabin with breathtaking views of the Rwenzori Mountains, perfect for hikers and nature lovers.",
+    "price_per_month": 200,
+    "currency": "USD",
+    "amenities": ["Fireplace", "Guided Hikes", "Free Parking", "Breakfast Included", "WiFi"],
+    "availability": {
+      "start_date": "2024-11-20",
+      "end_date": "2025-02-20"
+    },
+    "reviews": [
+      {
+        "user": "Hans Müller",
+        "rating": 4.8,
+        "comment": "Spectacular views and very cozy cabin."
+      }
+    ],
+    "host": {
+      "name": "Rwenzori Retreats",
+      "contact": "contact@rwenzoriretreats.com",
+      "response_time": "within a few hours",
+      "rating": 4.8
+    }
+  },
+  {
+    "id": 9,
+    "title": "Cultural Homestay in Gulu",
+    "type": "Rental",
+    "location": {
+      "city": "Gulu",
+      "country": "Uganda",
+      "address": "Main Street, Gulu",
+      "latitude": 2.7724,
+      "longitude": 32.2881
+    },
+    "images": [
+      "https://images.pexels.com/photos/1743229/pexels-photo-1743229.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/4825701/pexels-photo-4825701.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6587893/pexels-photo-6587893.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "Experience Acholi culture firsthand with a homestay in Gulu, includes cultural tours.",
+    "price_per_month": 110,
+    "currency": "USD",
+    "amenities": ["WiFi", "Meals Included", "Cultural Tours", "Free Parking", "Laundry Service"],
+    "availability": {
+      "start_date": "2024-11-10",
+      "end_date": "2025-02-10"
+    },
+    "reviews": [
+      {
+        "user": "Carlos Martinez",
+        "rating": 4.9,
+        "comment": "An enriching cultural experience, felt like home."
+      }
+    ],
+    "host": {
+      "name": "Rose Akena",
+      "contact": "roseakena@example.com",
+      "response_time": "within a day",
+      "rating": 5.0
+    }
+  },
+  {
+    "id": 10,
+    "title": "Beachside Hostel in Entebbe",
+    "type": "Hostel",
+    "location": {
+      "city": "Entebbe",
+      "country": "Uganda",
+      "address": "Beach Road, Entebbe",
+      "latitude": 0.0488,
+      "longitude": 32.4637
+    },
+    "images": [
+      "https://images.pexels.com/photos/2506990/pexels-photo-2506990.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7195861/pexels-photo-7195861.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1https://example.com/entebbehostel2.jpg",
+      "https://images.pexels.com/photos/7045302/pexels-photo-7045302.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A lively hostel right on the shores of Lake Victoria, offering fun activities and a social atmosphere.",
+    "price_per_month": 130,
+    "currency": "USD",
+    "amenities": ["WiFi", "Bar", "Shared Kitchen", "Beach Access", "Live Music"],
+    "availability": {
+      "start_date": "2024-10-30",
+      "end_date": "2025-01-30"
+    },
+    "reviews": [
+      {
+        "user": "Emily Wang",
+        "rating": 4.5,
+        "comment": "Great place to meet fellow travelers, loved the beach vibes!"
+      }
+    ],
+    "host": {
+      "name": "Entebbe Beach Hostel",
+      "contact": "info@entebbebeachhostel.com",
+      "response_time": "within an hour",
+      "rating": 4.6
+    }
+  },
+  {
+    "id": 11,
+    "title": "Safari Lodge in Murchison Falls",
+    "type": "Rental",
+    "location": {
+      "city": "Masindi",
+      "country": "Uganda",
+      "address": "Murchison Falls National Park, Masindi",
+      "latitude": 2.2534,
+      "longitude": 31.806
+    },
+    "images": [
+      "https://images.pexels.com/photos/210265/pexels-photo-210265.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6580407/pexels-photo-6580407.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/8143713/pexels-photo-8143713.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "Experience wildlife up close in this luxurious safari lodge overlooking the Nile River.",
+    "price_per_month": 700,
+    "currency": "USD",
+    "amenities": ["WiFi", "Guided Tours", "Swimming Pool", "Restaurant", "Air Conditioning"],
+    "availability": {
+      "start_date": "2024-12-15",
+      "end_date": "2025-03-15"
+    },
+    "reviews": [
+      {
+        "user": "Laura Johnson",
+        "rating": 5.0,
+        "comment": "An unforgettable experience! The wildlife and the lodge were amazing."
+      }
+    ],
+    "host": {
+      "name": "Murchison Safari Lodge",
+      "contact": "info@murchisonsafarilodge.com",
+      "response_time": "within a day",
+      "rating": 4.9
+    }
+  },
+  {
+    "id": 12,
+    "title": "Lake Bunyonyi Eco Resort",
+    "type": "Rental",
+    "location": {
+      "city": "Kabale",
+      "country": "Uganda",
+      "address": "Lake Bunyonyi, Kabale",
+      "latitude": -1.282,
+      "longitude": 29.9092
+    },
+    "images": [
+      "https://images.pexels.com/photos/7031616/pexels-photo-7031616.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/7018838/pexels-photo-7018838.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/28843948/pexels-photo-28843948/free-photo-of-luxury-outdoor-tropical-shower-in-sunny-maldives.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "An eco-friendly resort on the shores of Lake Bunyonyi, perfect for nature enthusiasts.",
+    "price_per_month": 220,
+    "currency": "USD",
+    "amenities": ["Boat Rides", "Hiking Trails", "Restaurant", "WiFi", "Eco-Tours"],
+    "availability": {
+      "start_date": "2024-12-05",
+      "end_date": "2025-03-05"
+    },
+    "reviews": [
+      {
+        "user": "Maria Rossi",
+        "rating": 5.0,
+        "comment": "A paradise on earth! Loved every moment."
+      }
+    ],
+    "host": {
+      "name": "Lake Bunyonyi Eco Team",
+      "contact": "contact@bunyonyiecoresort.com",
+      "response_time": "within a few hours",
+      "rating": 4.9
+    }
+  },
+  {
+    "id": 13,
+    "title": "Karamoja Cultural Experience",
+    "type": "Hostel",
+    "location": {
+      "city": "Moroto",
+      "country": "Uganda",
+      "address": "Mt. Moroto Road, Moroto",
+      "latitude": 2.5346,
+      "longitude": 34.6666
+    },
+    "images": [
+      "https://images.pexels.com/photos/3659683/pexels-photo-3659683.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/8092162/pexels-photo-8092162.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "Stay in a traditional Karamojong setting and immerse yourself in local customs.",
+    "price_per_month": 100,
+    "currency": "USD",
+    "amenities": ["Cultural Tours", "Meals Included", "Guided Treks", "WiFi", "Free Parking"],
+    "availability": {
+      "start_date": "2024-11-25",
+      "end_date": "2025-02-25"
+    },
+    "reviews": [
+      {
+        "user": "Liam O'Connor",
+        "rating": 4.7,
+        "comment": "An authentic cultural immersion, highly recommended."
+      }
+    ],
+    "host": {
+      "name": "Karamoja Homestays",
+      "contact": "info@karamojahomestays.com",
+      "response_time": "within a day",
+      "rating": 4.8
+    }
+  },
+  {
+    "id": 14,
+    "title": "Island Retreat on Ssese Islands",
+    "type": "Rental",
+    "location": {
+      "city": "Kalangala",
+      "country": "Uganda",
+      "address": "Bugala Island, Kalangala",
+      "latitude": -0.3089,
+      "longitude": 32.225
+    },
+    "images": [
+      "https://images.pexels.com/photos/2140972/pexels-photo-2140972.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6297080/pexels-photo-6297080.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6588586/pexels-photo-6588586.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A secluded island cottage offering tranquility and beautiful lake views.",
+    "price_per_month": 260,
+    "currency": "USD",
+    "amenities": ["Beach Access", "Boat Rentals", "Fishing", "Restaurant", "WiFi"],
+    "availability": {
+      "start_date": "2024-12-20",
+      "end_date": "2025-03-20"
+    },
+    "reviews": [
+      {
+        "user": "Akiko Tanaka",
+        "rating": 4.8,
+        "comment": "A peaceful getaway, the perfect place to unwind."
+      }
+    ],
+    "host": {
+      "name": "Ssese Island Retreat",
+      "contact": "contact@sseseislandretreat.com",
+      "response_time": "within a few hours",
+      "rating": 4.9
+    }
+  },
+  {
+    "id": 15,
+    "title": "Historic House in Mbale",
+    "type": "Rental",
+    "location": {
+      "city": "Mbale",
+      "country": "Uganda",
+      "address": "Wanale Hill Road, Mbale",
+      "latitude": 1.0827,
+      "longitude": 34.1758
+    },
+    "images": [
+      "https://images.pexels.com/photos/5644367/pexels-photo-5644367.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/6980668/pexels-photo-6980668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "https://images.pexels.com/photos/2988865/pexels-photo-2988865.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    ],
+    "description": "A charming historic house at the base of Wanale Hill, ideal for hikers and history enthusiasts.",
+    "price_per_month": 180,
+    "currency": "USD",
+    "amenities": ["Guided Hikes", "WiFi", "Garden", "Free Parking", "Kitchen"],
+    "availability": {
+      "start_date": "2024-11-30",
+      "end_date": "2025-02-28"
+    },
+    "reviews": [
+      {
+        "user": "Mohamed Ali",
+        "rating": 4.6,
+        "comment": "Loved the historic charm and proximity to the hills."
+      }
+    ],
+    "host": {
+      "name": "Esther Nanyonga",
+      "contact": "esthernanyonga@example.com",
+      "response_time": "within an hour",
+      "rating": 4.7
+    }
+  }
+]
