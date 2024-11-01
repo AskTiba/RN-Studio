@@ -10,9 +10,9 @@ export default function Home() {
       <Stack.Screen options={{ title: 'Home' }} />
       <Container>
         <ScreenContent path="app/index.tsx" title="Home" />
-        <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
+        {/* <Link href={{ pathname: '/details', params: { name: 'Dan' } }} asChild>
           <Button className="rounded-lg" title="Show Details" />
-        </Link>
+        </Link> */}
 
         <Button onPress={() => router.push('/tasks')} className="my-3 rounded-lg" title="Tasks" />
       </Container>

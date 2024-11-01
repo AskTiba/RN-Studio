@@ -15,8 +15,9 @@ export default function Layout() {
             statusBarStyle: 'dark',
             // presentation: 'transparentModal',
             headerShown: false,
-          }}
-        />
+          }}>
+          <Stack.Screen name="tasks/task-2" />
+        </Stack>
       </View>
     </GestureHandlerRootView>
   );

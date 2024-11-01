@@ -1,7 +1,7 @@
 import { View, Text, TextInput, FlatList } from 'react-native';
 import React from 'react';
 import { Stack } from 'expo-router';
-import Filter from '~/assets/svg/filter';
+import Filter from '~/assets/svgs/filter';
 import PlaceCard from '~/components/PlaceCard';
 import placesData from '~/data/places.json';
 
