@@ -16,7 +16,7 @@ export default function Layout() {
             // presentation: 'transparentModal',
             headerShown: false,
           }}>
-          <Stack.Screen name="tasks/task-2" />
+          {/* <Stack.Screen name="tasks/task-2" /> */}
         </Stack>
       </View>
     </GestureHandlerRootView>

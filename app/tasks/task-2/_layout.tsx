@@ -11,7 +11,7 @@ export default function Task2Layout() {
         statusBarColor: '#F8F4E1',
         statusBarStyle: 'dark',
         // presentation: 'transparentModal',
-        headerShown: false,
+        // headerShown: false,
       }}>
       {/* <Stack.Screen name="index" /> */}
       {/* <Stack.Screen name="polls" /> */}

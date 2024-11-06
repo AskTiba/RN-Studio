@@ -24,7 +24,9 @@ export default function PollDetails() {
   return (
     <View className={styles.container}>
       <Stack.Screen options={{ title: 'Polls' }} />
-      <Text className="p-1">{poll.question}</Text>
+      <Text className="p-1 text-[17px] font-bold">
+        Question {id}: {poll.question}
+      </Text>
       <View className="justify-center gap-2">
         {poll.options.map((option) => (
           <Pressable
