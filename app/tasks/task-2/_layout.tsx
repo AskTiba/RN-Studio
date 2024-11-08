@@ -10,6 +10,7 @@ export default function Task2Layout() {
         contentStyle: { backgroundColor: '#F8F4E1' },
         statusBarColor: '#F8F4E1',
         statusBarStyle: 'dark',
+        title:"Polls"
         // presentation: 'transparentModal',
         // headerShown: false,
       }}>

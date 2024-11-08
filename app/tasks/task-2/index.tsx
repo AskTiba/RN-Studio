@@ -1,22 +1,33 @@
-import { View, Text, FlatList, TouchableOpacity, Pressable } from 'react-native';
-import React from 'react';
-import { Link, Href, router, Stack } from 'expo-router';
+import { View, Text, FlatList, TouchableOpacity, Pressable, Alert } from 'react-native';
+import React, { useEffect, useState } from 'react';
+import { router, Stack } from 'expo-router';
 import Plus from '~/assets/svgs/plus';
-
-// Define interfaces for better type safety
-interface Poll {
-  id: number;
-}
-
-// Sample data
-const polls: Poll[] = [{ id: 1 }, { id: 2 }, { id: 3 }, { id: 4 }, { id: 5 }, { id: 6 }];
+import { supabase } from '~/lib/supabase';
 
 export default function Index() {
-  const renderPoll = ({ item }: { item: Poll }) => (
+  const [polls, setPolls] = useState([]);
+
+  useEffect(() => {
+    const fetchPolls = async () => {
+      console.log('fetching...');
+
+      let { data, error } = await supabase.from('polls').select('*');
+      if (error) {
+        Alert.alert('Error fetching data');
+      }
+      console.log(data);
+      setPolls(data);
+    };
+    fetchPolls();
+  }, []);
+
+  const renderPoll = ({ item }) => (
     <TouchableOpacity
       onPress={() => router.push(`/tasks/task-2/polls/${item.id}`)}
       className="rounded-xl bg-white p-3">
-      <Text className="text-base">{item.id}: Example poll question</Text>
+      <Text className="text-base">
+        {item.id}: {item.question}
+      </Text>
     </TouchableOpacity>
   );
 
