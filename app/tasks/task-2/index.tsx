@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { router, Stack } from 'expo-router';
 import Plus from '~/assets/svgs/plus';
 import { supabase } from '~/lib/supabase';
+import Person from '~/assets/svgs/person';
 
 export default function Index() {
   const [polls, setPolls] = useState([]);
@@ -15,7 +16,8 @@ export default function Index() {
       if (error) {
         Alert.alert('Error fetching data');
       }
-      console.log(data);
+      // console.log(data);
+      console.log(JSON.stringify(data, null, 2));
       setPolls(data);
     };
     fetchPolls();
@@ -35,11 +37,17 @@ export default function Index() {
     <View className="flex-1">
       <Stack.Screen
         options={{
+          headerLeft: () => (
+            <Pressable onPress={() => router.push('/Profile')} className="">
+              <Person color="#543310" />
+            </Pressable>
+          ),
           headerRight: () => (
             <Pressable onPress={() => router.push('/tasks/task-2/polls/CreatePoll')} className="">
               <Plus />
             </Pressable>
           ),
+          headerTitleAlign: 'center',
         }}
       />
       <FlatList

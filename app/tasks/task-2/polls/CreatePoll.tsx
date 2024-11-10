@@ -3,8 +3,6 @@ import React, { useState } from 'react';
 import { Stack } from 'expo-router';
 import Button from '~/components/Button';
 import { CustomInput } from '~/components/TextInput';
-import Cancel from '~/assets/svgs/cancel';
-import AppleLogo from '~/assets/svgs/apple-logo';
 
 export default function CreatePoll() {
   const [question, setQuestion] = useState('');

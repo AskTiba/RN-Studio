@@ -57,7 +57,7 @@ const Button: React.FC<ButtonProps> = ({
     const variantStyles = {
       primary: theme?.primary || 'bg-[#543310] active:bg[#543310]',
       secondary: theme?.secondary || 'bg-gray-200 active:bg-gray-300',
-      outline: theme?.outline || 'border border-[#D1D1D1] active:bg-blue-50',
+      outline: theme?.outline || 'border border-[#543310]',
       danger: theme?.danger || 'bg-[#C50F1F] active:bg-red-600',
       success: theme?.success || 'bg-green-500 active:bg-green-600',
       warning: theme?.warning || 'bg-yellow-500 active:bg-yellow-600',
