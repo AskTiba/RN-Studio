@@ -16,7 +16,6 @@ export default function Index() {
       if (error) {
         Alert.alert('Error fetching data');
       }
-      // console.log(data);
       console.log(JSON.stringify(data, null, 2));
       setPolls(data);
     };
