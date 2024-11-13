@@ -51,7 +51,20 @@ export default function Auth() {
   return (
     <View style={styles.container}>
       <Stack.Screen
-        options={{ headerShown: true, title: 'Login or Sign up', headerTitleAlign: 'center' }}
+        options={{
+          title: 'Sign up or log in',
+          headerStyle: { backgroundColor: '#F8F4E1' },
+          contentStyle: { backgroundColor: '#F8F4E1' },
+          statusBarColor: '#F8F4E1',
+          statusBarStyle: 'dark',
+          presentation: 'transparentModal',
+          headerShown: true,
+          headerTitleAlign: 'center',
+          // headerTitleStyle: {
+          //   fontSize: 17,
+          //   fontWeight: 600,
+          // },
+        }}
       />
       <View style={[styles.verticallySpaced]}>
         <CustomInput

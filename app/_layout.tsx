@@ -22,7 +22,7 @@ export default function Layout() {
               //   fontWeight: 600,
               // },
             }}>
-            {/* <Stack.Screen name="tasks/task-2" /> */}
+            <Stack.Screen name="(auth)" />
           </Stack>
         </AuthProvider>
       </View>

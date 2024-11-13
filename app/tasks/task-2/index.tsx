@@ -42,7 +42,7 @@ export default function Index() {
             </Pressable>
           ),
           headerRight: () => (
-            <Pressable onPress={() => router.push('/tasks/task-2/polls/CreatePoll')} className="">
+            <Pressable onPress={() => router.push('/(protected)/CreatePoll')} className="">
               <Plus />
             </Pressable>
           ),
