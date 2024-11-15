@@ -1,8 +1,5 @@
-import { Stack, Link, router, Redirect } from 'expo-router';
-import Button from '~/components/Button';
-
-import { Container } from '~/components/Container';
-import { ScreenContent } from '~/components/ScreenContent';
+import { Redirect } from 'expo-router';
 
 export default function Home() {
-  return <Redirect href={'/tasks'}/>}
+  return <Redirect href={'/tasks'} />;
+}
