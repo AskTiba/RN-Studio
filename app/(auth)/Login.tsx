@@ -2,8 +2,9 @@ import React, { useState } from 'react';
 import { Alert, StyleSheet, View, AppState } from 'react-native';
 import { supabase } from '~/lib/supabase';
 import Button from '~/components/Button';
-import { CustomInput } from '~/components/TextInput';
+// import { CustomInput } from '~/components/TextInput';
 import { Stack } from 'expo-router';
+import CustomInput from '~/components/TextInput';
 
 // Tells Supabase Auth to continuously refresh the session automatically if
 // the app is in the foreground. When this is added, you will continue to receive
@@ -68,7 +69,6 @@ export default function Auth() {
       />
       <View style={[styles.verticallySpaced]}>
         <CustomInput
-          label="Email"
           onChangeText={(text) => setEmail(text)}
           value={email}
           placeholder="email@address.com"
@@ -77,7 +77,6 @@ export default function Auth() {
       </View>
       <View style={styles.verticallySpaced}>
         <CustomInput
-          label="Password"
           onChangeText={(text) => setPassword(text)}
           value={password}
           secureTextEntry={true}
