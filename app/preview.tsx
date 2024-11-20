@@ -1,7 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, Easing, View } from 'react-native';
 import LottieView from 'lottie-react-native';
-import { Button } from '~/components/Button';
 
 const AnimatedLottieView = Animated.createAnimatedComponent(LottieView);
 

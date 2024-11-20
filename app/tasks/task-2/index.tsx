@@ -10,13 +10,13 @@ export default function Index() {
 
   useEffect(() => {
     const fetchPolls = async () => {
-      console.log('fetching...');
+      // console.log('fetching...');
 
       let { data, error } = await supabase.from('polls').select('*');
       if (error) {
         Alert.alert('Error fetching data');
       }
-      console.log(JSON.stringify(data, null, 2));
+      // console.log(JSON.stringify(data, null, 2));
       setPolls(data);
     };
     fetchPolls();

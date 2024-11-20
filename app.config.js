@@ -39,6 +39,12 @@ export default {
         projectId: '06f7012d-de56-4a2c-a7b8-6f4d3af9a766',
       },
     },
+    updates: {
+      url: 'https://u.expo.dev/06f7012d-de56-4a2c-a7b8-6f4d3af9a766',
+    },
+    runtimeVersion: {
+      policy: 'appVersion',
+    },
     plugins: [
       'expo-router',
       [

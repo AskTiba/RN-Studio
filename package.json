@@ -20,7 +20,7 @@
     "dayjs": "^1.11.13",
     "dotenv": "^16.4.5",
     "expo": "^51.0.37",
-    "expo-constants": "~16.0.1",
+    "expo-constants": "~16.0.2",
     "expo-dev-client": "~4.0.28",
     "expo-linking": "~6.3.1",
     "expo-location": "~17.0.1",
@@ -42,7 +42,8 @@
     "react-native-svg": "^15.7.1",
     "react-native-web": "~0.19.10",
     "expo-notifications": "~0.28.19",
-    "expo-device": "~6.0.2"
+    "expo-device": "~6.0.2",
+    "expo-updates": "~0.25.27"
   },
   "devDependencies": {
     "@babel/core": "^7.20.0",
