@@ -48,6 +48,16 @@ export default {
     plugins: [
       'expo-router',
       [
+        'expo-font',
+        {
+          fonts: [
+            '~/assets/fonts/Roboto-Regular.ttf',
+            '~/assets/fonts/RubikGlitchPop-Regular.ttf',
+            '~/assets/fonts/Inter-VariableFont_opsz,wght.ttf',
+          ],
+        },
+      ],
+      [
         '@rnmapbox/maps',
         {
           RNMapboxMapsVersion: '11.4.0',

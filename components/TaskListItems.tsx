@@ -9,13 +9,14 @@ type TaskListItems = {
 export default function TaskListItems({ task }: TaskListItems) {
   return (
     <Pressable onPress={() => router.push(`/tasks/task-${task}`)} className={styles.container}>
-      <Text className={styles.text}>{task}</Text>
+      <Text style={{ fontFamily: 'RubikGlitchPro' }} className={styles.text}>
+        {task}
+      </Text>
     </Pressable>
   );
 }
 
 const styles = {
-  container: `mx-1 aspect-square flex-1 items-center justify-center rounded-2xl border-2 border-white`,
-  text: `text-8xl text-[#543310]`,
-  
+  container: `mx-1 aspect-square flex-1 items-center justify-center rounded-2xl border-2 border-[#543310]`,
+  text: `text-8xl text-[  ]`,
 };

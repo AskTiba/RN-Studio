@@ -1,10 +1,28 @@
 import '../global.css';
 import { View } from 'react-native';
-import { Stack } from 'expo-router';
+import { SplashScreen, Stack } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import AuthProvider from '~/providers/AuthProvider';
+import { useFonts } from 'expo-font';
+import { useEffect } from 'react';
 
-export default function Layout() {
+export default function RootLayout() {
+  const [loaded, error] = useFonts({
+    Roboto: require('~/assets/fonts/Roboto-Regular.ttf'),
+    RubikGlitchPro: require('~/assets/fonts/RubikGlitchPop-Regular.ttf'),
+    Inter: require('~/assets/fonts/Inter-VariableFont_opsz,wght.ttf'),
+  });
+
+  useEffect(() => {
+    if (loaded || error) {
+      SplashScreen.hideAsync();
+    }
+  }, [loaded, error]);
+
+  if (!loaded && !error) {
+    return null;
+  }
+
   return (
     <GestureHandlerRootView style={{ flex: 1 }}>
       <View style={{ flex: 1 }}>
