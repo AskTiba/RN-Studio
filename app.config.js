@@ -51,9 +51,9 @@ export default {
         'expo-font',
         {
           fonts: [
-            '~/assets/fonts/Roboto-Regular.ttf',
-            '~/assets/fonts/RubikGlitchPop-Regular.ttf',
-            '~/assets/fonts/Inter-VariableFont_opsz,wght.ttf',
+            './assets/fonts/Roboto-Regular.ttf',
+            './assets/fonts/RubikGlitchPop-Regular.ttf',
+            './assets/fonts/Inter-VariableFont_opsz,wght.ttf',
           ],
         },
       ],

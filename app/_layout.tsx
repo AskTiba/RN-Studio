@@ -8,9 +8,9 @@ import { useEffect } from 'react';
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
+    Inter: require('~/assets/fonts/Inter-VariableFont_opsz,wght.ttf'),
     Roboto: require('~/assets/fonts/Roboto-Regular.ttf'),
     RubikGlitchPro: require('~/assets/fonts/RubikGlitchPop-Regular.ttf'),
-    Inter: require('~/assets/fonts/Inter-VariableFont_opsz,wght.ttf'),
   });
 
   useEffect(() => {
