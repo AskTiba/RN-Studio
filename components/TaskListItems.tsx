@@ -18,5 +18,5 @@ export default function TaskListItems({ task }: TaskListItems) {
 
 const styles = {
   container: `mx-1 aspect-square flex-1 items-center justify-center rounded-2xl border-2 border-[#543310]`,
-  text: `text-8xl text-[  ]`,
+  text: `text-8xl text-['#543310']`,
 };

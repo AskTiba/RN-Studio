@@ -34,11 +34,10 @@ export default function RootLayout() {
               statusBarColor: '#F8F4E1',
               statusBarStyle: 'dark',
               presentation: 'transparentModal',
-              headerShown: false,
-              // headerTitleStyle: {
-              //   fontSize: 17,
-              //   fontWeight: 600,
-              // },
+              headerTitleStyle: {
+                fontSize: 17,
+                fontWeight: '600', // Ensure this is a string for compatibility
+              },
             }}>
             <Stack.Screen name="(auth)" />
           </Stack>
