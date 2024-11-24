@@ -8,6 +8,7 @@ import Shield from '~/assets/svgs/shield';
 import Notifications from '~/assets/svgs/notifications';
 import Privacy from '~/assets/svgs/privacy';
 import House from '~/assets/svgs/house';
+import Display from '~/assets/svgs/display';
 
 export default function Settings() {
   return (
@@ -46,7 +47,7 @@ export default function Settings() {
           />
           <CustomListItem
             title="Display"
-            LeftIcon={<Shield color={'#543310'} />}
+            LeftIcon={<Display color={'#543310'} />}
             RightIcon={<RightChevron />}
           />
           <CustomListItem
