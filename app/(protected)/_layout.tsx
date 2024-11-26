@@ -1,6 +1,6 @@
 import React from 'react';
 import { Redirect, Slot, Stack } from 'expo-router';
-import { useAuth } from '~/providers/AuthProvider';
+import { useAuth } from '~/providers/AuthCoontext';
 
 export default function ProtectedLayout() {
   const { session, user } = useAuth();

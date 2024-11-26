@@ -3,7 +3,7 @@ import React from 'react';
 import TaskListItems from '~/components/TaskListItems';
 import { Stack } from 'expo-router';
 
-export default function tasks() {
+export default function Tasks() {
   const tasks = [...Array(50)].map((_, index) => index + 1);
   return (
     <View className="flex-1">

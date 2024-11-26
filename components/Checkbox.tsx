@@ -1,31 +1,47 @@
-import React from "react";
-import { TouchableOpacity } from "react-native";
-import CheckMark from "~/assets/svgs/checkmark";
+import React from 'react';
+import { TouchableOpacity, Text, View } from 'react-native';
+import CheckMark from '~/assets/svgs/checkmark';
+import { useCheckbox } from '~/providers/CheckboxContext';
 
 interface CheckboxProps {
-  checked: boolean;
-  onValueChange: (checked: boolean) => void;
-  className?: string;
+  id: string; // Unique ID for the checkbox
+  size?: number;
+  borderColor?: string;
+  backgroundColor?: string;
   checkmarkColor?: string;
+  className?: string;
 }
-
-const Checkbox: React.FC<CheckboxProps> = ({
-  checked,
-  onValueChange,
+const Checkbox = ({
+  id,
+  size = 24,
+  borderColor = '#cccccc',
+  backgroundColor = '#4C4BF6',
+  checkmarkColor = '#ffffff',
   className,
-  checkmarkColor = "#ffffff",
-}) => {
-  const handlePress = () => {
-    onValueChange(!checked);
-  };
+}: CheckboxProps) => {
+  const { state, toggleCheckbox } = useCheckbox();
+  const checked = state[id] || false;
 
+  const handlePress = () => {
+    toggleCheckbox(id);
+  };
   return (
-    <TouchableOpacity
-      className={`w-6 h-6 justify-center items-center border-2 border-gray-300 rounded-full bg-[#4C4BF6] ${className}`}
-      onPress={handlePress}
-    >
-      {checked && <CheckMark width={12} height={12} stroke={checkmarkColor} />}
-    </TouchableOpacity>
+    <View className="flex-row items-center">
+      <TouchableOpacity
+        className={`items-center justify-center rounded-full border ${className}`}
+        style={{
+          height: size,
+          width: size,
+          borderColor,
+          backgroundColor: checked ? backgroundColor : 'transparent',
+          borderWidth: 2,
+        }}
+        accessibilityRole="checkbox"
+        accessibilityState={{ checked }}
+        onPress={handlePress}>
+        {checked && <CheckMark width={size / 2} height={size / 2} stroke={checkmarkColor} />}
+      </TouchableOpacity>
+    </View>
   );
 };
 

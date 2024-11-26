@@ -17,7 +17,7 @@ interface Place {
   currency: string;
 }
 
-export default function index() {
+export default function Index() {
   const renderItem = ({ item }: { item: Place }) => <PlaceCard place={item} />;
   return (
     <View className="flex-1 p-4">
