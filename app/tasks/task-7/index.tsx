@@ -18,7 +18,7 @@ export default function Settings() {
       />
       <View className="">
         <Text className="py-4 font-bold uppercase">Account</Text>
-        <View className=" rounded-lg">
+        <View className=" rounded-lg gap-y-4">
           <CustomListItem
             title="Manage Account"
             LeftIcon={<Person />}
@@ -34,7 +34,7 @@ export default function Settings() {
       </View>
       <View className="">
         <Text className="py-4 font-bold uppercase">Content & Display</Text>
-        <View className=" rounded-lg">
+        <View className=" rounded-lg gap-y-4">
           <CustomListItem
             title="Notifications"
             LeftIcon={<Notifications />}
@@ -59,7 +59,7 @@ export default function Settings() {
       </View>
       <View className="">
         <Text className="py-4 font-bold uppercase">Support & About</Text>
-        <View className=" rounded-lg">
+        <View className=" rounded-lg gap-y-4">
           <CustomListItem
             title="Report a problem"
             LeftIcon={<Notifications />}
@@ -79,7 +79,7 @@ export default function Settings() {
       </View>
       <View className="">
         <Text className="py-4 font-bold uppercase">Login</Text>
-        <View className=" rounded-lg">
+        <View className=" rounded-lg gap-y-4">
           <CustomListItem
             title="Switch role"
             LeftIcon={<Notifications />}

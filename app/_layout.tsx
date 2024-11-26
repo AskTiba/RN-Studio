@@ -2,7 +2,6 @@ import '../global.css';
 import { View } from 'react-native';
 import { SplashScreen, Stack } from 'expo-router';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
-import AuthProvider from '~/providers/AuthCoontext';
 import { useFonts } from 'expo-font';
 import { useEffect } from 'react';
 import AppProviders from '~/providers/AppProviders';

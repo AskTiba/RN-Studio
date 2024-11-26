@@ -1,15 +1,6 @@
 import { Stack } from 'expo-router';
 import React, { useState } from 'react';
-import {
-  SafeAreaView,
-  View,
-  Text,
-  FlatList,
-  Modal,
-  TextInput,
-  TouchableOpacity,
-  StyleSheet,
-} from 'react-native';
+import { View, Text, FlatList, Modal, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
 import AddTodo from '~/components/AddTodo';
 import TodoItem from '~/components/TodoItem';
 
@@ -20,7 +11,10 @@ interface Todo {
 }
 
 export default function TodoIndex() {
-  const [todos, setTodos] = useState<Todo[]>([]);
+  const [todos, setTodos] = useState<Todo[]>([
+    { id: '1', text: 'Learn React Native', completed: false },
+    { id: '2', text: 'Build a Todo App', completed: false },
+  ]);
   const [editingTodo, setEditingTodo] = useState<Todo | null>(null);
   const [editText, setEditText] = useState('');
 
@@ -90,12 +84,12 @@ export default function TodoIndex() {
       />
 
       {/* Edit Modal */}
-      <Modal visible={!!editingTodo} transparent animationType="slide">
-        <View className="w-4/5 rounded-lg bg-white p-5">
-          <View className="w-4/5 rounded-lg bg-white p-5">
+      <Modal  visible={!!editingTodo} transparent animationType="slide">
+        <View className="flex-1 justify-end bg-transparent bg-opacity-100">
+          <View className="w-fullrounded-lg rounded-xl bg-white p-4">
             <Text className="mb-4 text-lg font-bold">Edit Todo</Text>
             <TextInput
-              className="mb-4 rounded-md border  p-3 text-base"
+              className="mb-4 rounded-md border p-3 text-base"
               value={editText}
               onChangeText={setEditText}
               autoFocus

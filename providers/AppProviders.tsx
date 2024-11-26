@@ -1,5 +1,5 @@
 import React from 'react';
-import AuthProvider from './AuthCoontext';
+import AuthProvider from './AuthProvider';
 import { CheckboxProvider } from './CheckboxContext';
 import { ToggleProvider } from './ToggleContext';
 

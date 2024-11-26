@@ -1,6 +1,6 @@
 import { View, Text } from 'react-native';
 import { Redirect, Stack } from 'expo-router';
-import { useAuth } from '~/providers/AuthCoontext';
+import { useAuth } from '~/providers/AuthProvider';
 import Button from '~/components/Button';
 import { supabase } from '~/lib/supabase';
 import { useState } from 'react';

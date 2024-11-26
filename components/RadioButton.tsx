@@ -1,37 +1,90 @@
-import { Pressable, StyleSheet } from "react-native";
-import CheckMark from "@/assets/svgs/checkmark";
+import React from 'react';
+import { Pressable, StyleSheet, View, Text } from 'react-native';
 
 type RadioButtonProps = {
-  checked: boolean;
-  onPress: () => void;
+  checked: boolean; // Current state of the button
+  onPress: () => void; // Callback when the button is pressed
+  size?: number; // Size of the radio button
+  borderColor?: string; // Border color for the button
+  checkedColor?: string; // Fill color when checked
+  checkmarkColor?: string; // Checkmark color
+  label?: string; // Optional label text
+  labelPosition?: 'left' | 'right'; // Position of the label
+  labelStyle?: object; // Custom styles for the label
+  style?: object; // Additional styles for the button
 };
 
-function RadioButton({ checked, onPress }: RadioButtonProps) {
+const RadioButton: React.FC<RadioButtonProps> = ({
+  checked,
+  onPress,
+  size = 20,
+  borderColor = '#ccc',
+  checkedColor = '#ffffff', // Default iOS blue
+  checkmarkColor = '#543310',
+  label,
+  labelPosition = 'right',
+  labelStyle = {},
+  style = {},
+}) => {
   return (
-    <Pressable
-      style={[styles.checkboxBase, checked && styles.checkboxChecked]}
-      onPress={onPress}
-    >
-      {checked && <CheckMark width={20} height={20} stroke={"#636363"} />}
-    </Pressable>
+    <View style={styles.container}>
+      {/* Label on the left */}
+      {label && labelPosition === 'left' && (
+        <Text style={[styles.label, labelStyle, { marginRight: 8 }]}>{label}</Text>
+      )}
+
+      {/* Radio Button */}
+      <Pressable
+        style={[
+          styles.radioBase,
+          {
+            borderColor,
+            width: size,
+            height: size,
+            borderRadius: size / 2,
+          },
+          checked && {
+            borderColor: checkedColor,
+            backgroundColor: checkedColor,
+          },
+          style,
+        ]}
+        onPress={onPress}
+        accessibilityRole="radio"
+        accessibilityState={{ checked }}>
+        {checked && (
+          <View
+            style={{
+              width: size / 2,
+              height: size / 2,
+              borderRadius: size / 4,
+              backgroundColor: checkmarkColor,
+            }}
+          />
+        )}
+      </Pressable>
+
+      {/* Label on the right */}
+      {label && labelPosition === 'right' && (
+        <Text style={[styles.label, labelStyle, { marginLeft: 8 }]}>{label}</Text>
+      )}
+    </View>
   );
-}
+};
 
 const styles = StyleSheet.create({
-  checkboxBase: {
-    width: 24,
-    height: 24,
-    justifyContent: "center",
-    alignItems: "center",
-    // borderRadius: 12, // Changed to make it circular, consistent with iOS look
-    borderWidth: 2,
-    borderColor: "transparent",
-    backgroundColor: "transparent",
-    opacity: 0, // Set opacity to 0 to make it invisible
+  container: {
+    flexDirection: 'row',
+    alignItems: 'center',
   },
-  checkboxChecked: {
-    backgroundColor: "transparent",
-    opacity: 1, // Set opacity to 1 to make it visible when checked
+  radioBase: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    borderWidth: 2,
+  },
+  label: {
+    fontSize: 16,
+    color: '#000',
   },
 });
 

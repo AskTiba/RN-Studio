@@ -17,13 +17,14 @@ interface TodoItemProps {
 
 export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
   return (
-    <View className="elevation mb-3 flex-row items-center  rounded-lg bg-white p-4 shadow-black">
-      <TouchableOpacity
-        className=""
-        style={[styles.checkbox, todo.completed && styles.checked]}
-        onPress={() => onToggle(todo.id)}
+    <View className="elevation mb-3 flex-row items-center rounded-lg bg-white p-4 shadow-black">
+      <Checkbox
+        className="mr-3"
+        id={todo.id}
+        checked={todo.completed}
+        onChange={() => onToggle(todo.id)}
       />
-      <Text className="flex-1  text-base" style={[todo.completed && styles.completedText]}>
+      <Text className="flex-1 text-base" style={[todo.completed && styles.completedText]}>
         {todo.text}
       </Text>
       <View className="flex-row">
@@ -42,17 +43,6 @@ export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemP
 }
 
 const styles = StyleSheet.create({
-  checkbox: {
-    width: 24,
-    height: 24,
-    borderRadius: 12,
-    borderWidth: 2,
-    borderColor: '#007AFF',
-    marginRight: 10,
-  },
-  checked: {
-    backgroundColor: '#007AFF',
-  },
   completedText: {
     textDecorationLine: 'line-through',
     color: '#888',
