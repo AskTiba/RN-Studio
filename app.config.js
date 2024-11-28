@@ -3,6 +3,7 @@ import 'dotenv/config';
 export default {
   expo: {
     name: 'RN-Studio',
+    owner: 'asktiba',
     slug: 'RN-Studio',
     version: '1.0.0',
     scheme: 'RN-Studio',

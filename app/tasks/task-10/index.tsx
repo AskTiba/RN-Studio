@@ -27,7 +27,7 @@ export default function Index() {
 
   const headerAnimatedStyle = useAnimatedStyle(() => {
     return {
-      opacity: interpolate(scrollHandler.value, [0, 500], [0, 1]),
+      opacity: interpolate(scrollHandler.value, [0, 200], [0, 1]),
     };
   }, []);
 
@@ -62,7 +62,7 @@ export default function Index() {
         }}
       />
       <View>
-        <ScrollView className={`pt-[${headerHeight}]`}   ref={scrollref}>
+        <ScrollView className={`pt-[${headerHeight}]`} ref={scrollref}>
           {items.map((item, index) => (
             <View key={index} className="m-4 rounded-lg bg-avocado py-4">
               <Text className="text-center text-base text-[#F8F4E1]">{item}</Text>
