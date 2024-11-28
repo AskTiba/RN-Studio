@@ -1,16 +1,15 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useEffect, useState, ReactNode, PropsWithChildren } from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface CheckboxContextType {
-  state: Record<string, boolean>;
-  toggleCheckbox: (id: string) => void;
-  setCheckbox: (id: string, value: boolean) => void; // Explicit setter
+  state: { [id: string]: boolean }; // Store checkbox states using their `id`
+  toggleCheckbox: (id: string, value: boolean) => void; // Accepts both `id` and `value` for toggling
 }
 
 const CheckboxContext = createContext<CheckboxContextType | undefined>(undefined);
 
-export const CheckboxProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [state, setState] = useState<Record<string, boolean>>({});
+export const CheckboxProvider = ({ children }: PropsWithChildren) => {
+  const [state, setState] = useState<{ [id: string]: boolean }>({});
 
   // Load persisted state on mount
   useEffect(() => {
@@ -40,17 +39,16 @@ export const CheckboxProvider: React.FC<{ children: ReactNode }> = ({ children }
   }, [state]);
 
   // Toggle the state of a specific checkbox
-  const toggleCheckbox = (id: string) => {
-    setState((prev) => ({ ...prev, [id]: !prev[id] }));
-  };
-
-  // Set a specific checkbox state explicitly
-  const setCheckbox = (id: string, value: boolean) => {
-    setState((prev) => ({ ...prev, [id]: value }));
+  const toggleCheckbox = (id: string, value: boolean) => {
+    setState((prevState) => {
+      const newState = { ...prevState, [id]: value };
+      AsyncStorage.setItem('checkboxState', JSON.stringify(newState)); // Persist the new state
+      return newState;
+    });
   };
 
   return (
-    <CheckboxContext.Provider value={{ state, toggleCheckbox, setCheckbox }}>
+    <CheckboxContext.Provider value={{ state, toggleCheckbox }}>
       {children}
     </CheckboxContext.Provider>
   );

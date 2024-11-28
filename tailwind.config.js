@@ -9,6 +9,8 @@ module.exports = {
         coffee: '#543310',
         cream: '#F8F4E1',
         honeydew: '#F1FAEE',
+        avocado: '#538D22',
+        cornsilk: '#FEFAE0',
       },
     },
   },

@@ -1,4 +1,11 @@
-import React, { createContext, useContext, useEffect, useState, ReactNode } from 'react';
+import React, {
+  createContext,
+  useContext,
+  useEffect,
+  useState,
+  ReactNode,
+  PropsWithChildren,
+} from 'react';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 interface ToggleContextType {
@@ -8,7 +15,7 @@ interface ToggleContextType {
 
 const ToggleContext = createContext<ToggleContextType | undefined>(undefined);
 
-export const ToggleProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
+export const ToggleProvider = ({ children }: PropsWithChildren) => {
   const [toggleState, setToggleState] = useState<Record<string, boolean>>({});
 
   // Load state from AsyncStorage on mount

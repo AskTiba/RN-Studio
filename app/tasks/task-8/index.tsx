@@ -1,8 +1,10 @@
-import { Stack } from 'expo-router';
+// TodoIndex.tsx
 import React, { useState } from 'react';
-import { View, Text, FlatList, Modal, TextInput, TouchableOpacity, StyleSheet } from 'react-native';
+import { View, FlatList, Modal, TextInput, TouchableOpacity, StyleSheet, Text } from 'react-native';
+import { Stack } from 'expo-router';
 import AddTodo from '~/components/AddTodo';
 import TodoItem from '~/components/TodoItem';
+import { useCheckbox } from '~/providers/CheckboxContext';
 
 interface Todo {
   id: string;
@@ -11,14 +13,25 @@ interface Todo {
 }
 
 export default function TodoIndex() {
+  const { state, toggleCheckbox } = useCheckbox(); // Get context state and toggle function
   const [todos, setTodos] = useState<Todo[]>([
-    { id: '1', text: 'Learn React Native', completed: false },
-    { id: '2', text: 'Build a Todo App', completed: false },
+    { id: '1', text: 'Do laundry', completed: false },
+    { id: '2', text: 'Buy groceries', completed: false },
+    // Add more todos here
   ]);
+
+  // Toggle function to update both Todo list and context state
+  const onToggle = (id: string) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) => (todo.id === id ? { ...todo, completed: !todo.completed } : todo))
+    );
+    // Update context state for the specific checkbox
+    toggleCheckbox(id, !(state[id] || false)); // Default to false if state[id] is undefined
+  };
+
   const [editingTodo, setEditingTodo] = useState<Todo | null>(null);
   const [editText, setEditText] = useState('');
 
-  // Add new todo
   const handleAdd = (text: string) => {
     const newTodo: Todo = {
       id: Date.now().toString(),
@@ -28,19 +41,10 @@ export default function TodoIndex() {
     setTodos([...todos, newTodo]);
   };
 
-  // Toggle todo completion
-  const handleToggle = (id: string) => {
-    setTodos(
-      todos.map((todo) => (todo.id === id ? { ...todo, completed: !todo.completed } : todo))
-    );
-  };
-
-  // Delete todo
   const handleDelete = (id: string) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   };
 
-  // Start editing todo
   const handleEdit = (id: string) => {
     const todo = todos.find((t) => t.id === id);
     if (todo) {
@@ -49,7 +53,6 @@ export default function TodoIndex() {
     }
   };
 
-  // Save edited todo
   const handleSaveEdit = () => {
     if (editingTodo && editText.trim()) {
       setTodos(
@@ -75,18 +78,19 @@ export default function TodoIndex() {
         renderItem={({ item }) => (
           <TodoItem
             todo={item}
-            onToggle={handleToggle}
+            onToggle={onToggle}
             onDelete={handleDelete}
             onEdit={handleEdit}
+            isChecked={state[item.id] || item.completed} // Ensure the `isChecked` prop is correctly passed
           />
         )}
         className="flex-1 px-5"
       />
 
       {/* Edit Modal */}
-      <Modal  visible={!!editingTodo} transparent animationType="slide">
+      <Modal visible={!!editingTodo} transparent animationType="slide">
         <View className="flex-1 justify-end bg-transparent bg-opacity-100">
-          <View className="w-fullrounded-lg rounded-xl bg-white p-4">
+          <View className="w-full rounded-lg bg-white p-4">
             <Text className="mb-4 text-lg font-bold">Edit Todo</Text>
             <TextInput
               className="mb-4 rounded-md border p-3 text-base"
@@ -96,13 +100,12 @@ export default function TodoIndex() {
             />
             <View className="flex-row justify-end">
               <TouchableOpacity
-                className="ml-3 rounded-md bg-['#FF3B30'] p-3"
+                className="ml-3 rounded-md bg-red-500 p-3"
                 onPress={() => setEditingTodo(null)}>
                 <Text className="text-white">Cancel</Text>
               </TouchableOpacity>
               <TouchableOpacity
-                className="ml-3 rounded-md bg-['#FF3B30'] p-3"
-                style={[styles.saveButton]}
+                className="ml-3 rounded-md bg-blue-500 p-3"
                 onPress={handleSaveEdit}>
                 <Text className="text-white">Save</Text>
               </TouchableOpacity>

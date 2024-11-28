@@ -8,8 +8,6 @@ import CustomListItem from '~/components/CustomListItem';
 import RadioButton from '~/components/RadioButton';
 
 export default function Index() {
-  const [defaultChecked, setDefaultChecked] = useState(false);
-  const [largeChecked, setLargeChecked] = useState(false);
   const [selected, setSelected] = useState('option3');
   return (
     <View className="flex-1 justify-between">

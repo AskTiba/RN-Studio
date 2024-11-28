@@ -13,9 +13,11 @@ interface TodoItemProps {
   onToggle: (id: string) => void;
   onDelete: (id: string) => void;
   onEdit: (id: string) => void;
+  isChecked: boolean;  // Add this property to the interface
 }
 
 export default function TodoItem({ todo, onToggle, onDelete, onEdit }: TodoItemProps) {
+  
   return (
     <View className="elevation mb-3 flex-row items-center rounded-lg bg-white p-4 shadow-black">
       <Checkbox

@@ -21,7 +21,7 @@ export default {
     splash: {
       image: './assets/splash.png',
       resizeMode: 'contain',
-      backgroundColor: '#ffffff',
+      backgroundColor: '#F8F4E1',
     },
     assetBundlePatterns: ['**/*'],
     ios: {

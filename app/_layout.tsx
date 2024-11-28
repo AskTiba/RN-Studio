@@ -34,7 +34,7 @@ export default function RootLayout() {
               headerShown: false,
               statusBarColor: '#F8F4E1',
               statusBarStyle: 'dark',
-              presentation: 'transparentModal',
+              // presentation: 'transparentModal',
               headerTitleAlign: 'center',
               headerTitleStyle: {
                 fontSize: 20,

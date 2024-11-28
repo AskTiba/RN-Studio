@@ -1,6 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
-import CheckMark from '~/assets/svgs/checkmark';
+import CheckMark from '~/assets/svgs/checkmark'; // Update with your actual path
 import { useCheckbox } from '~/providers/CheckboxContext';
 
 interface CheckboxProps {
@@ -35,14 +35,20 @@ const Checkbox: React.FC<CheckboxProps> = ({
   onChange, // Change handler for controlled mode
 }) => {
   const { state, toggleCheckbox } = useCheckbox(); // Access context state
-  const isChecked = checked !== undefined ? checked : state[id] || false; // Controlled vs context
 
+  // Determine the checkbox state: either controlled (from props) or uncontrolled (from context)
+  const isChecked = checked !== undefined ? checked : state[id] || false; // Controlled vs context state
+
+  // Handle the checkbox press action
   const handlePress = () => {
     if (!disabled) {
-      if (onChange) {
-        onChange(!isChecked); // Notify parent if controlled
+      const newChecked = !isChecked;
+      if (onChange !== undefined) {
+        // If controlled, notify the parent with the new state
+        onChange(newChecked);
       } else {
-        toggleCheckbox(id); // Update via context for uncontrolled
+        // If uncontrolled, toggle the state in context
+        toggleCheckbox(id, newChecked); // Pass both ID and new state (true/false)
       }
     }
   };
@@ -50,6 +56,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
   return (
     <View style={[styles.container, containerStyle]} className="flex-row items-center">
       {label && labelPosition === 'left' && <Text style={[styles.label, labelStyle]}>{label}</Text>}
+
       <TouchableOpacity
         className={`items-center justify-center rounded-full border ${className}`}
         style={{
@@ -66,6 +73,7 @@ const Checkbox: React.FC<CheckboxProps> = ({
         disabled={disabled}>
         {isChecked && <CheckMark width={size / 2} height={size / 2} stroke={checkmarkColor} />}
       </TouchableOpacity>
+
       {label && labelPosition === 'right' && (
         <Text style={[styles.label, labelStyle]}>{label}</Text>
       )}
