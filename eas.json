@@ -7,10 +7,24 @@
     "development": {
       "developmentClient": true,
       "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "development",
+        "SUPABASE_URL": "process.env.SUPABASE_URL",
+        "SUPABASE_KEY": "process.env.SUPABASE_KEY",
+        "MAPBOX_PUBLIC_KEY": "process.env.MAPBOX_PUBLIC_KEY",
+        "MAPBOX_SECRET_KEY": "process.env.MAPBOX_SECRET_KEY"
+      },
       "channel": "development"
     },
     "preview": {
       "distribution": "internal",
+      "env": {
+        "APP_VARIANT": "preview",
+        "SUPABASE_URL": "process.env.SUPABASE_URL",
+        "SUPABASE_KEY": "process.env.SUPABASE_KEY",
+        "MAPBOX_PUBLIC_KEY": "process.env.MAPBOX_PUBLIC_KEY",
+        "MAPBOX_SECRET_KEY": "process.env.MAPBOX_SECRET_KEY"
+      },
       "channel": "preview"
     },
     "production": {
