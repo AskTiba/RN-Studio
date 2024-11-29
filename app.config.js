@@ -30,7 +30,7 @@ export default {
     android: {
       adaptiveIcon: {
         foregroundImage: './assets/adaptive-icon.png',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#F8F4E1',
       },
       package: 'com.asktiba.RNStudio',
     },
