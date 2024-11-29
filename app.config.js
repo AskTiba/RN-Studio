@@ -48,6 +48,11 @@ export default {
     orientation: 'portrait',
     icon: './assets/icon.png',
     userInterfaceStyle: 'light',
+    splash: {
+      image: './assets/splash.png',
+      resizeMode: 'contain',
+      backgroundColor: '#F8F4E1',
+    },
     assetBundlePatterns: ['**/*'],
     ios: {
       supportsTablet: true,
