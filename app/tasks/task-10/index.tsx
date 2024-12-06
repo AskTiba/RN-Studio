@@ -6,7 +6,6 @@ import Animated, {
   useAnimatedStyle,
   withTiming,
   useScrollViewOffset,
-  ScrollHandler,
   interpolate,
 } from 'react-native-reanimated';
 import Chat from '~/assets/svgs/chat';

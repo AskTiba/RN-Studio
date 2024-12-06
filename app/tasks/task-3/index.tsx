@@ -1,8 +1,8 @@
-import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import React, { Fragment } from 'react';
+import { StatusBar, StyleSheet, View } from 'react-native';
 import Mapbox, { MapView } from '@rnmapbox/maps';
 import { Stack } from 'expo-router';
-import { StatusBar } from 'expo-status-bar';
+// import { StatusBar } from 'expo-status-bar';
 
 Mapbox.setAccessToken(
   'pk.eyJ1IjoiYXNrdGliYSIsImEiOiJjbTJoZTZwNGowYzBmMndzYmpvNHNzMGV4In0.QQ27lH-fpSC7jep5p2gF2g'
@@ -11,6 +11,7 @@ Mapbox.setAccessToken(
 const MapBoxIndex = () => {
   return (
     <View className="flex-1">
+      <StatusBar translucent backgroundColor={'transparent'} />
       <MapView
         logoEnabled={false}
         scaleBarEnabled={false}
