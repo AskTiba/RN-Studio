@@ -1,14 +1,27 @@
-import { View, Text, ActivityIndicator, Image } from 'react-native';
+import { View, Text, ActivityIndicator, Image, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { Stack, useLocalSearchParams } from 'expo-router';
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { fetchMovie } from '~/api/movies';
+import Bookmark from '~/assets/svgs/bookmark';
+import { addMovieToWatchlist } from '~/api/watchlist';
+import Watchlist from '~/assets/svgs/watchlist';
 
 export default function MovieDetails() {
   const { id } = useLocalSearchParams();
+
+  const client = useQueryClient();
+
   const { data, isLoading, error } = useQuery({
     queryKey: ['movie', id],
     queryFn: () => fetchMovie(id),
+  });
+
+  const { mutate } = useMutation({
+    mutationFn: () => addMovieToWatchlist(id),
+    onSuccess: () => {
+      client.invalidateQueries(['watchlist']);
+    },
   });
 
   if (isLoading) {
@@ -22,7 +35,15 @@ export default function MovieDetails() {
   return (
     <View>
       <Stack.Screen
-        options={{ headerShown: true, title: data.title, headerTitleAlign: 'center' }}
+        options={{
+          headerShown: true,
+          title: 'Movie details',
+          headerTitleStyle: {
+            fontSize: 20,
+            fontWeight: '700',
+          },
+          headerRight: () => <Watchlist />,
+        }}
       />
       <Image
         className="h-[300px] w-full rounded-xl"
@@ -30,6 +51,10 @@ export default function MovieDetails() {
       />
       <View className="p-3">
         <Text className="text-center text-2xl font-semibold">{data.title}</Text>
+        <TouchableOpacity onPress={() => mutate} className="flex flex-row items-center gap-2">
+          <Bookmark color={'#543310'} />
+          <Text>Add to watchlist</Text>
+        </TouchableOpacity>
         <Text className="text-base font-semibold">{data.overview}</Text>
       </View>
     </View>
