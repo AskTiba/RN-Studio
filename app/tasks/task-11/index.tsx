@@ -34,6 +34,10 @@ export default function Index() {
       </View>
       <FlatList
         // key={}
+
+
+
+        
         data={movies}
         renderItem={({ index, item }) => <MovieListItem movie={item} />}
         numColumns={2}

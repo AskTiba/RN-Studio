@@ -8,6 +8,7 @@ import Tourism from './Tourism';
 import Education from './Education';
 import Finance from './Finance';
 import Technology from './Technology';
+
 const renderScene = SceneMap({
   first: Engineering,
   second: Health,
@@ -41,7 +42,7 @@ export default function TabViewExample() {
       />
 
       {/* Main Content Area */}
-      <View className="mt-20 flex-1">
+      <View className="flex-1">
         <TabView
           navigationState={{ index, routes }}
           renderScene={renderScene}

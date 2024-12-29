@@ -42,11 +42,10 @@ export default function MovieDetails() {
             fontSize: 20,
             fontWeight: '700',
           },
-          headerRight: () => <Watchlist />,
         }}
       />
       <Image
-        className="h-[300px] w-full rounded-xl"
+        className="w-fullf h-[300px]"
         source={{ uri: `https://image.tmdb.org/t/p/w500${data.backdrop_path}` }}
       />
       <View className="p-3">

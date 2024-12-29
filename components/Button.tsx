@@ -52,7 +52,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   const getButtonStyles = () => {
-    const baseStyles = 'rounded-[12px] items-center justify-center';
+    const baseStyles = 'rounded-lg items-center justify-center';
 
     const variantStyles = {
       primary: theme?.primary || 'bg-[#543310] active:bg[#543310]',
