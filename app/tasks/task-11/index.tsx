@@ -15,7 +15,11 @@ export default function Index() {
   });
 
   if (isLoading) {
-    return <ActivityIndicator />;
+    return (
+      <View className="flex-1 items-center justify-center">
+        <ActivityIndicator />
+      </View>
+    );
   }
 
   if (error) {
@@ -35,9 +39,6 @@ export default function Index() {
       <FlatList
         // key={}
 
-
-
-        
         data={movies}
         renderItem={({ index, item }) => <MovieListItem movie={item} />}
         numColumns={2}
